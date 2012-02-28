@@ -124,7 +124,7 @@
 				<%
 				DatabaseConnection dbConnect = DatabaseConnection.getInstance();
 				List<Privatkontakt> lstKontakt = dbConnect.getPrivatkontakte();
-				/*List<Privatkontakt> lstKontakt = new ArrayList<Privatkontakt>(); */
+				//List<Privatkontakt> lstKontakt = new ArrayList<Privatkontakt>(); 
 				
 				
 				Privatkontakt tmpKontakt = new Privatkontakt();
@@ -182,11 +182,11 @@
 				<div id="sideNavi">
 						
 						<ul>
-							<li><a href="http://localhost:8080/Contactsuite/Controller?fcode=KontaktAnlegen">Neuer Kontakt</a></li>
+							<li><a href="Controller?fcode=KontaktAnlegen">Neuer Kontakt</a></li>
 							<li><a href=#>Aktion</a></li>
 							<li><a href=#>Aktion</a></li>
 							<li><a href=#>Aktion</a></li>
-							<li><a href="http://localhost:8080/Contactsuite/Controller?fcode=Logout">Logout</a></li>
+							<li><a href="Controller?fcode=Logout">Logout</a></li>
 						</ul>
 						
 				</div>

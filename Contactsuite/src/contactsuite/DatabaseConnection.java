@@ -232,7 +232,7 @@ public class DatabaseConnection {
 	public List<Privatkontakt> getPrivatkontakte(){
 		List<Privatkontakt> lstKontakte = new ArrayList<Privatkontakt>();
 		Privatkontakt tmpKontakt = new Privatkontakt();
-		String sql = "SELECT * FROM "+tblKontakt+" WHERE istFirmenkontakt = 0 AND istGeloescht = 0 ORDER BY nachname;";
+		String sql = "SELECT * FROM "+tblKontakt+" WHERE istFirmenkontakt = 0 AND istGeloescht = 0 ORDER BY nachname;"; System.out.println(sql);
 		try{
 			Statement stmt = this.connection.createStatement();
 			ResultSet result = stmt.executeQuery(sql);
