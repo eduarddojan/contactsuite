@@ -124,7 +124,20 @@
 				<%
 				DatabaseConnection dbConnect = DatabaseConnection.getInstance();
 				List<Privatkontakt> lstKontakt = dbConnect.getPrivatkontakte();
-				ListIterator<Privatkontakt> it = lstKontakt.listIterator();
+				/*List<Privatkontakt> lstKontakt = new ArrayList<Privatkontakt>(); */
+				
+				
+				Privatkontakt tmpKontakt = new Privatkontakt();
+				
+				/*Privatkontakt testKontakt = new Privatkontakt(12, "","" , "5", "Musterstadt", "email", "", "", false, null, null, "Hans", "Wurst");
+				Privatkontakt testKontakt2 = new Privatkontakt(12, "","" , "5", "doofdorf", "email", "", "", false, null, null, "Tim", "Doof");
+				Privatkontakt testKontakt3 = new Privatkontakt(12, "","" , "5", "Entenhausen", "email", "", "", false, null, null, "Max", "Schmeling");
+				
+				lstKontakt.add(testKontakt);
+				lstKontakt.add(testKontakt2);
+				lstKontakt.add(testKontakt3);*/
+				
+				Iterator<Privatkontakt> it = lstKontakt.iterator();
 				
 				out.println("<table border='2'>");
 				out.println("<th>Vorname</th>");
@@ -134,7 +147,7 @@
 				out.println("<th>Bearbeiten</th>");
 				
 				while(it.hasNext()){
-					Privatkontakt tmpKontakt = it.next();
+					tmpKontakt = it.next();
 					out.println("<tr><td>");
 					out.println(tmpKontakt.getVorname());
 					out.println("</td><td>");

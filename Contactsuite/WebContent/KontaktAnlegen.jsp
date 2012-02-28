@@ -31,10 +31,14 @@ kon.setPlz(plz);
 kon.setOrt(ort);
 kon.setEmail(email);
 kon.setTelefonnummer(telefonnummer);
+//kon.setIstOeffentlich(istOeffentlich);
+//kon.setErstelltVon(erstelltVon); TODO: richtige Attribute zuweisen
 
 dbConnect.SpeicherDaten(kon);
 
 %>
-<p>Kontakt Anlegen JSP</p>
+<p>Der Kontakt wurde erfolgreich angelegt.</p></br>
+<a href="Controller?fcode=KontaktAnlegen">Weiteren Kontakt anlegen.</a>
+<a href="Controller?fcode=Kontaktverwaltung">Zurück zur Startseite.</a>
 </body>
 </html>
